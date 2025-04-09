@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Screen Reader Extension</title>
+    <style>
+      body {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; /* Align items to the left */
+        padding-left: 5px; 
+        padding-right: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .switch {
+        display: flex; /* Use flex to align items */
+        align-items: center;
+        margin-bottom: 5px; /* Add margin between switches */
+      }
+
+      .switch-text {
+        font-size: 14px;
+      }
+
+      .shortcut {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        font-size: 12px;
+      }
+
+      .shortcut-icon {
+        margin-right: 5px;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <label class="switch">
+      <input type="checkbox" id="toggleSwitch" checked />
+      <span class="slider round"></span>
+      <span class="switch-text">Enable Screen Reader</span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="shortcutSwitch" checked />
+      <span class="slider round"></span>
+      <span class="switch-text">Enable Keyboard Navigation</span>
+    </label>
+
+
+    <div class="shortcut">
+      <img
+        src="icons8-ctrl-50.png"
+        alt="Control Key Icon"
+        class="shortcut-icon"
+      />
+      <span>Press CTRL + Z + B to turn the reader on and off.</span>
+    </div>
+
+    <div class="shortcut">
+      <img
+        src="icons8-shift-50.png"
+        alt="Shift Key Icon"
+        class="shortcut-icon"
+      />
+      <span>Press SHIFT to stop speaking.</span>
+    </div>
+
+    <div class="shortcut">
+      <img src="icons8-alt-50.png" alt="Alt Key Icon" class="shortcut-icon" />
+      <span>Press ALT to read website description.</span>
+    </div>
+
+    <div class="shortcut">
+      <img
+        src="icons8-tab-key-50.png"
+        alt="Tab Key Icon"
+        class="shortcut-icon"
+      />
+      <span>Press TAB to focus on the next element on the page.</span>
+    </div>
+  </body>
+</html>
